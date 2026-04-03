@@ -1,0 +1,84 @@
+2026-04-03 15:21:17,409 - agent - INFO - middleware.py:35 - [log_before_model]即将调用模型，带有1条消息。
+2026-04-03 15:21:17,410 - agent - DEBUG - middleware.py:44 - [log_before_model]HumanMessage当前消息：我想办理狗证应该怎么做
+2026-04-03 15:21:26,219 - agent - INFO - middleware.py:16 - [tool monitor]执行工具：rag_summarize
+2026-04-03 15:21:26,219 - agent - INFO - middleware.py:17 - [tool monitor]传入参数：{'query': '天津办理狗证流程'}
+2026-04-03 15:21:26,475 - agent - INFO - vector_store.py:132 - [加载知识库] 检测到知识库文件发生变化，开始清空并全量重建。
+2026-04-03 15:21:27,171 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\公租房\公交+环卫困难职工.txt已存入向量库
+2026-04-03 15:21:27,644 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\公租房\公租房申请人家庭现住房情况有关证明材料.txt已存入向量库
+2026-04-03 15:21:28,343 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\公租房\各区住房保障部门地址及电话.txt已存入向量库
+2026-04-03 15:21:30,998 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\公租房\各区公租房管理服务咨询电话.txt已存入向量库
+2026-04-03 15:21:32,852 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\公租房\天津哪类人可单独申请最低月租补贴？.txt已存入向量库
+2026-04-03 15:21:33,570 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\公租房\天津市公共租赁住房管理办法.txt已存入向量库
+2026-04-03 15:21:39,620 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\公积金\天津公积金提取.txt已存入向量库
+2026-04-03 15:21:40,264 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\公积金\天津公积金查询.txt已存入向量库
+2026-04-03 15:21:41,780 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\公积金\天津公积金缴存.txt已存入向量库
+2026-04-03 15:21:44,311 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\公积金\天津公积金贷款.txt已存入向量库
+2026-04-03 15:21:44,914 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\养老保险\天津关于做好城乡居民基本养老保险参保缴费有关工作的通知.txt已存入向量库
+2026-04-03 15:21:45,543 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\养老保险\天津关于公布2025年度本市基本养老金计发基数的通知.txt已存入向量库
+2026-04-03 15:21:46,113 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\养老保险\天津养老保险查询指南.txt已存入向量库
+2026-04-03 15:21:48,195 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\养老保险\天津各区社保局地址电话一览表.txt已存入向量库
+2026-04-03 15:21:48,916 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\户籍身份\外地户口在津首次办理身份证指南.txt已存入向量库
+2026-04-03 15:21:50,235 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\户籍身份\天津市居住证办理指南.txt已存入向量库
+2026-04-03 15:21:50,820 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\户籍身份\天津身份证办理指南(时间+地点+费用).txt已存入向量库
+2026-04-03 15:21:51,395 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\户籍身份\点击可查看天津市居民身份证受理点.txt已存入向量库
+2026-04-03 15:21:51,991 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\户籍身份\请点击这里，了解办理详情.txt已存入向量库
+2026-04-03 15:21:56,531 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\政府文件\【安全生产工作】天津市危险化学品企业安全治理规定.txt已存入向量库
+2026-04-03 15:22:01,627 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\政府文件\【审计监督】天津市内部审计工作规定.txt已存入向量库
+2026-04-03 15:22:04,614 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\政府文件\【就业培训】天津市职业技能培训规定.txt已存入向量库
+2026-04-03 15:22:06,234 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\政府文件\【政务公开】天津市人民政府关于修改《天津市报废机动车回收利用管理办法》和《天津市公共场所室内空气质量管理规定》的决定.txt已存入向量库
+2026-04-03 15:22:09,822 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\政府文件\【政务公开】天津市人民政府关于修改《天津市行政规范性文件管理规定》的决定.txt已存入向量库
+2026-04-03 15:22:10,539 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\政府文件\【政务公开】天津市人民政府关于废止《天津市公路保护管理办法》和修改《天津市重点建设项目审计规定》的决定.txt已存入向量库
+2026-04-03 15:22:11,154 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\政府文件\【政务公开】天津市人民政府关于废止部分规章的决定.txt已存入向量库
+2026-04-03 15:22:13,843 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\政府文件\【政务公开】天津市人民政府规章立法后评估办法.txt已存入向量库
+2026-04-03 15:22:17,205 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\政府文件\【政务公开】天津市传统工艺美术保护办法.txt已存入向量库
+2026-04-03 15:22:20,077 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\政府文件\【政务公开】天津市公共安全视频图像信息系统管理办法.txt已存入向量库
+2026-04-03 15:22:23,504 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\政府文件\【政务公开】天津市华侨捐赠管理办法.txt已存入向量库
+2026-04-03 15:22:29,745 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\政府文件\【政务公开】天津市高层建筑消防安全管理规定.txt已存入向量库
+2026-04-03 15:22:34,117 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\政府文件\【政务服务】天津市政务服务便民热线管理办法.txt已存入向量库
+2026-04-03 15:22:36,350 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\政府文件\【政府法治】天津市行政裁决程序规定.txt已存入向量库
+2026-04-03 15:22:39,873 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\政府文件\【综合交通】天津市机动车停车管理办法.txt已存入向量库
+2026-04-03 15:22:40,421 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\政府文件\关于公布天津市数字技术工程师培育项目第三批培训机构目录的通知.txt已存入向量库
+2026-04-03 15:22:41,062 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\政府文件\关于邀请参加博士后科技服务团（天津滨海高新区）的通知.txt已存入向量库
+2026-04-03 15:22:43,531 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\政府文件\北京市人社局天津市人社局河北省人社厅关于遴选京津冀高技能人才队伍建设专家库入库专家的通知.txt已存入向量库
+2026-04-03 15:22:45,511 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\政府文件\市人社局关于举办2024京津冀环渤海人才交流洽谈会暨“海河英才”专场招聘会的通知.txt已存入向量库
+2026-04-03 15:22:48,828 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\政府文件\市人社局关于举办第六届天津市“海河英才”博士后创新创业大赛暨第三届全国博士后创新创业大赛天津赛区选拔赛的通知.txt已存入向量库
+2026-04-03 15:22:50,200 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\政府文件\市人社局关于公布2024年专家服务团和国家级专家服务基地名单的通知.txt已存入向量库
+2026-04-03 15:22:52,970 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\政府文件\市人社局关于公布新一批天津市级专家服务基地名单的通知.txt已存入向量库
+2026-04-03 15:22:55,439 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\政府文件\市人社局关于印发《天津市特级技师、首席技师评聘管理暂行办法》的通知.txt已存入向量库
+2026-04-03 15:22:59,839 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\政府文件\市人社局关于开展2024年度职称评审工作的通知.txt已存入向量库
+2026-04-03 15:23:01,426 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\政府文件\市人社局关于征集线上职业技能培训平台的通告.txt已存入向量库
+2026-04-03 15:23:02,402 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\政府文件\市人社局关于设立2025年新一批博士后科研工作站的通知.txt已存入向量库
+2026-04-03 15:23:03,253 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\政府文件\市人社局关于设立天大智图（天津）科技有限公司等52家博士后科研工作站分站的通知.txt已存入向量库
+2026-04-03 15:23:04,278 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\政府文件\市人社局关于设立熙瞳（天津）光电科技有限公司等8家博士后科研工作站分站的通知.txt已存入向量库
+2026-04-03 15:23:07,069 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\政府文件\市人社局关于高层次创新型人才预报名2024年专题研修项目的通知.txt已存入向量库
+2026-04-03 15:23:07,953 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\政府文件\市人社局等四部门关于认定第九批天津市人才公寓的通知.txt已存入向量库
+2026-04-03 15:23:08,543 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\政府文件\市人社局等四部门关于认定第八批天津市人才公寓的通知.txt已存入向量库
+2026-04-03 15:23:09,216 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\政府文件\市人社局等四部门关于认定第十一批天津市人才公寓及变更有关公寓信息的通知.txt已存入向量库
+2026-04-03 15:23:10,168 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\政府文件\市人社局等四部门关于认定第十批天津市人才公寓的通知.txt已存入向量库
+2026-04-03 15:23:10,712 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\政府文件\津公网安备 12010102000421号.txt已存入向量库
+2026-04-03 15:23:11,879 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\政府文件\津公网安备 12010302000991号.txt已存入向量库
+2026-04-03 15:23:14,013 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\旅游\2025全国高考生各景区免门票政策汇总（持续更新）一年一度的全国高考落下帷幕，考完试的你记得保管好准考证~近日多景区公布针对高考生的优惠政策，赶紧来看！2025-06-09 1716.txt已存入向量库
+2026-04-03 15:23:15,710 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\旅游\2026天津元旦周边游景点推荐2026年元旦马上就要到了，这里为大家准备了天津周边城市好玩景点推荐，具体详见正文。2025-12-03 1734.txt已存入向量库
+2026-04-03 15:23:16,751 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\旅游\天津欢乐谷欢乐中国年新春庙会热闹非凡；津门盛焰惊爆眼球；千架无人机星空绘梦等等精彩活动快来看！02.17 - 03.08.txt已存入向量库
+2026-04-03 15:23:17,795 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\旅游\宝坻区了凡公园主题花灯展赐福巡游、非遗展演、光影秀、灯谜大会等特色环节轮番登场，为游客带来丰富的新春游玩选择。02.16 - 03.03.txt已存入向量库
+2026-04-03 15:23:18,614 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\旅游\葛沽宝辇会津南区葛沽宝辇会今年不仅有少年抬辇还打破以往“八辇五亭”格局天一灯棚凤辇全新亮相升级为 “九辇五亭”03.04.txt已存入向量库
+2026-04-03 15:23:19,221 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\生活\天津市各区养犬咨询电话一览.txt已存入向量库
+2026-04-03 15:23:20,478 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\生活\天津市狗证办理指南.txt已存入向量库
+2026-04-03 15:23:21,555 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\生活\天津市狗证办理操作流程.txt已存入向量库
+2026-04-03 15:23:22,250 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\社保\各区医保分中心联系电话一览表.txt已存入向量库
+2026-04-03 15:23:23,004 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\社保\天津医保窗口查询地址.txt已存入向量库
+2026-04-03 15:23:25,043 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\社保\天津医疗保险查询指南.txt已存入向量库
+2026-04-03 15:23:27,545 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\社保\天津各区社保管理中心地址及联系电话.txt已存入向量库
+2026-04-03 15:23:28,993 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\社保\职工社保缴费基数+比例.txt已存入向量库
+2026-04-03 15:23:29,755 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\社保卡\天津各区社保局电话一览表.txt已存入向量库
+2026-04-03 15:23:30,314 - agent - INFO - vector_store.py:166 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data/天津知识库\社保卡\天津社保卡查询指南.txt已存入向量库
+2026-04-03 15:23:36,088 - agent - INFO - middleware.py:21 - [tool monitor]工具执行结果：content='天津办理狗证可通过线上或线下方式进行。线上需注册登录“天津智慧犬管”小程序，实名认证并填写宠物及个人信息，上传地址证明照片和犬只免疫证明、四张彩色照片（侧身正脸、全身站立，两寸），提交后由公安机关线上审核，审核结果在小程序内显示，驳回可重新申请，成功后凭电子犬证接受检查。无法网上办理的，可到养犬地派出所或辖区公安分局治安支队（区县养犬管理办公室）申请，领取新版《天津市养犬登记证》和犬牌；单位及境外人员养犬需到市公安局治安管理总队办理。' name='rag_summarize' tool_call_id='call_25891c0bed68417c81c3dd41'，调用成功
+2026-04-03 15:23:38,519 - agent - INFO - middleware.py:35 - [log_before_model]即将调用模型，带有3条消息。
+2026-04-03 15:23:38,520 - agent - DEBUG - middleware.py:44 - [log_before_model]ToolMessage当前消息：天津办理狗证可通过线上或线下方式进行。线上需注册登录“天津智慧犬管”小程序，实名认证并填写宠物及个人信息，上传地址证明照片和犬只免疫证明、四张彩色照片（侧身正脸、全身站立，两寸），提交后由公安机关线上审核，审核结果在小程序内显示，驳回可重新申请，成功后凭电子犬证接受检查。无法网上办理的，可到养犬地派出所或辖区公安分局治安支队（区县养犬管理办公室）申请，领取新版《天津市养犬登记证》和犬牌；单位及境外人员养犬需到市公安局治安管理总队办理。
+2026-04-03 15:24:11,598 - agent - INFO - middleware.py:35 - [log_before_model]即将调用模型，带有3条消息。
+2026-04-03 15:24:11,599 - agent - DEBUG - middleware.py:44 - [log_before_model]HumanMessage当前消息：居住证怎么办
+2026-04-03 15:24:13,306 - agent - INFO - middleware.py:16 - [tool monitor]执行工具：rag_summarize
+2026-04-03 15:24:13,307 - agent - INFO - middleware.py:17 - [tool monitor]传入参数：{'query': '天津居住证办理流程'}
+2026-04-03 15:24:16,229 - agent - INFO - middleware.py:21 - [tool monitor]工具执行结果：content='天津居住证办理需先完成居住登记。线上可通过“天津公安民生服务”微信小程序或天津网上办事大厅搜索“居住证申领”在线办理；线下需携带材料前往本人居住登记所属的公安派出所或受委托的社区服务机构办理。' name='rag_summarize' tool_call_id='call_2d31674a9e2d4b10bda43425'，调用成功
+2026-04-03 15:24:17,296 - agent - INFO - middleware.py:35 - [log_before_model]即将调用模型，带有5条消息。
+2026-04-03 15:24:17,297 - agent - DEBUG - middleware.py:44 - [log_before_model]ToolMessage当前消息：天津居住证办理需先完成居住登记。线上可通过“天津公安民生服务”微信小程序或天津网上办事大厅搜索“居住证申领”在线办理；线下需携带材料前往本人居住登记所属的公安派出所或受委托的社区服务机构办理。

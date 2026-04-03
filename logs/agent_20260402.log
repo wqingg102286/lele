@@ -1,0 +1,9 @@
+2026-04-02 17:10:12,090 - agent - INFO - middleware.py:35 - [log_before_model]即将调用模型，带有1条消息。
+2026-04-02 17:10:12,091 - agent - DEBUG - middleware.py:37 - [log_before_model]HumanMessage当前消息：我在天津想办理社保卡应该怎么做？
+2026-04-02 17:10:15,744 - agent - INFO - middleware.py:16 - [tool monitor]执行工具：rag_summarize
+2026-04-02 17:10:15,744 - agent - INFO - middleware.py:17 - [tool monitor]传入参数：{'query': '天津办理社保卡流程'}
+2026-04-02 17:10:18,430 - agent - INFO - middleware.py:21 - [tool monitor]工具执行结果：content='天津办理社保卡需携带本人有效身份证件到社保卡服务网点现场办理，或通过“天津人力社保”APP在线申领。首次申领免费，补换卡需缴纳工本费。办理后可选择邮寄或自取方式领取社保卡。' name='rag_summarize' tool_call_id='call_67bdd659552e4990aeb04e1d'，调用成功
+2026-04-02 17:10:18,432 - agent - INFO - middleware.py:35 - [log_before_model]即将调用模型，带有3条消息。
+2026-04-02 17:10:18,432 - agent - DEBUG - middleware.py:37 - [log_before_model]ToolMessage当前消息：天津办理社保卡需携带本人有效身份证件到社保卡服务网点现场办理，或通过“天津人力社保”APP在线申领。首次申领免费，补换卡需缴纳工本费。办理后可选择邮寄或自取方式领取社保卡。
+2026-04-02 17:11:46,627 - agent - INFO - middleware.py:35 - [log_before_model]即将调用模型，带有1条消息。
+2026-04-02 17:11:46,628 - agent - DEBUG - middleware.py:37 - [log_before_model]HumanMessage当前消息：你好，

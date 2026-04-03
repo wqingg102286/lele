@@ -1,0 +1,13 @@
+streamlit
+langchain
+langchain-core
+langchain-community
+langchain-chroma
+langchain-text-splitters
+langgraph
+chromadb
+pyyaml
+dashscope
+pypdf
+python-docx
+

@@ -1,0 +1,286 @@
+2026-03-27 14:37:44,134 - agent - ERROR - file_handler.py:42 - [文件列表]路径data不存在
+2026-03-27 14:37:44,134 - agent - ERROR - file_handler.py:11 - [md5计算]文件pdf不存在
+2026-03-27 14:38:22,208 - agent - ERROR - file_handler.py:42 - [文件列表]路径data不存在
+2026-03-27 14:38:22,208 - agent - ERROR - file_handler.py:11 - [md5计算]文件pdf不存在
+2026-03-27 14:38:22,209 - agent - ERROR - vector_store.py:90 - [加载知识库]文件pdf处理失败:File path pdf is not a valid file or url
+Traceback (most recent call last):
+  File "E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\rag\vector_store.py", line 77, in load_document
+    documents: list[Document] = get_file_documents(file_path)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\rag\vector_store.py", line 60, in get_file_documents
+    return pdf_loader(filepath)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\utils\file_handler.py", line 51, in pdf_loader
+    return PyPDFLoader(file_path, passwd).load()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\envs\rag_agent\Lib\site-packages\langchain_community\document_loaders\pdf.py", line 281, in __init__
+    super().__init__(file_path, headers=headers)
+  File "D:\anaconda3\envs\rag_agent\Lib\site-packages\langchain_community\document_loaders\pdf.py", line 140, in __init__
+    raise ValueError("File path %s is not a valid file or url" % self.file_path)
+ValueError: File path pdf is not a valid file or url
+2026-03-27 14:38:22,211 - agent - ERROR - file_handler.py:11 - [md5计算]文件docx不存在
+2026-03-27 14:38:22,212 - agent - ERROR - vector_store.py:90 - [加载知识库]文件docx处理失败:Docx2txtLoader.__init__() got an unexpected keyword argument 'encoding'
+Traceback (most recent call last):
+  File "E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\rag\vector_store.py", line 77, in load_document
+    documents: list[Document] = get_file_documents(file_path)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\rag\vector_store.py", line 62, in get_file_documents
+    return word_worder(filepath)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\utils\file_handler.py", line 57, in word_worder
+    return Docx2txtLoader(file_path, encoding=encoding).load()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Docx2txtLoader.__init__() got an unexpected keyword argument 'encoding'
+2026-03-27 14:38:22,213 - agent - ERROR - file_handler.py:11 - [md5计算]文件txt不存在
+2026-03-27 14:38:22,213 - agent - ERROR - vector_store.py:90 - [加载知识库]文件txt处理失败:Error loading txt
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\rag_agent\Lib\site-packages\langchain_community\document_loaders\text.py", line 42, in lazy_load
+    with open(self.file_path, encoding=self.encoding) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'txt'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\rag\vector_store.py", line 77, in load_document
+    documents: list[Document] = get_file_documents(file_path)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\rag\vector_store.py", line 58, in get_file_documents
+    return txt_loader(filepath)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\utils\file_handler.py", line 54, in txt_loader
+    return TextLoader(file_path, encoding=encoding).load()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\envs\rag_agent\Lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\envs\rag_agent\Lib\site-packages\langchain_community\document_loaders\text.py", line 58, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading txt
+2026-03-27 14:39:21,003 - agent - ERROR - file_handler.py:42 - [文件列表]路径data不存在
+2026-03-27 14:40:49,608 - agent - ERROR - file_handler.py:42 - [文件列表]路径data不存在
+2026-03-27 15:04:34,083 - agent - ERROR - vector_store.py:90 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data\扫地机器人100问.pdf处理失败:`pypdf` package not found, please install it with `pip install pypdf`
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\rag_agent\Lib\site-packages\langchain_community\document_loaders\parsers\pdf.py", line 359, in lazy_parse
+    import pypdf
+ModuleNotFoundError: No module named 'pypdf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\rag\vector_store.py", line 77, in load_document
+    documents: list[Document] = get_file_documents(file_path)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\rag\vector_store.py", line 60, in get_file_documents
+    return pdf_loader(filepath)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\utils\file_handler.py", line 51, in pdf_loader
+    return PyPDFLoader(file_path, passwd).load()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\envs\rag_agent\Lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\envs\rag_agent\Lib\site-packages\langchain_community\document_loaders\pdf.py", line 305, in lazy_load
+    yield from self.parser.lazy_parse(blob)
+  File "D:\anaconda3\envs\rag_agent\Lib\site-packages\langchain_community\document_loaders\parsers\pdf.py", line 361, in lazy_parse
+    raise ImportError(
+ImportError: `pypdf` package not found, please install it with `pip install pypdf`
+2026-03-27 15:04:36,256 - agent - INFO - vector_store.py:87 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data\扫地机器人100问2.txt已存入向量库
+2026-03-27 15:04:38,367 - agent - INFO - vector_store.py:87 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data\扫拖一体机器人100问.txt已存入向量库
+2026-03-27 15:04:42,633 - agent - INFO - vector_store.py:87 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data\故障排除.txt已存入向量库
+2026-03-27 15:04:44,916 - agent - INFO - vector_store.py:87 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data\维护保养.txt已存入向量库
+2026-03-27 15:04:46,783 - agent - INFO - vector_store.py:87 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data\选购指南.txt已存入向量库
+2026-03-27 15:07:37,976 - agent - INFO - vector_store.py:87 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data\扫地机器人100问.pdf已存入向量库
+2026-03-27 15:07:39,858 - agent - INFO - vector_store.py:87 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data\扫地机器人100问2.txt已存入向量库
+2026-03-27 15:07:41,954 - agent - INFO - vector_store.py:87 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data\扫拖一体机器人100问.txt已存入向量库
+2026-03-27 15:07:45,864 - agent - INFO - vector_store.py:87 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data\故障排除.txt已存入向量库
+2026-03-27 15:07:47,973 - agent - INFO - vector_store.py:87 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data\维护保养.txt已存入向量库
+2026-03-27 15:07:49,967 - agent - INFO - vector_store.py:87 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data\选购指南.txt已存入向量库
+2026-03-27 15:09:10,547 - agent - INFO - vector_store.py:87 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data\扫地机器人100问.pdf已存入向量库
+2026-03-27 15:09:12,656 - agent - INFO - vector_store.py:87 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data\扫地机器人100问2.txt已存入向量库
+2026-03-27 15:09:15,071 - agent - INFO - vector_store.py:87 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data\扫拖一体机器人100问.txt已存入向量库
+2026-03-27 15:09:20,111 - agent - INFO - vector_store.py:87 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data\故障排除.txt已存入向量库
+2026-03-27 15:09:22,890 - agent - INFO - vector_store.py:87 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data\维护保养.txt已存入向量库
+2026-03-27 15:09:25,209 - agent - INFO - vector_store.py:87 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data\选购指南.txt已存入向量库
+2026-03-27 15:11:57,791 - agent - INFO - vector_store.py:88 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data\扫地机器人100问.pdf已存入向量库
+2026-03-27 15:11:59,796 - agent - INFO - vector_store.py:88 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data\扫地机器人100问2.txt已存入向量库
+2026-03-27 15:12:02,223 - agent - INFO - vector_store.py:88 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data\扫拖一体机器人100问.txt已存入向量库
+2026-03-27 15:12:06,739 - agent - INFO - vector_store.py:88 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data\故障排除.txt已存入向量库
+2026-03-27 15:12:09,116 - agent - INFO - vector_store.py:88 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data\维护保养.txt已存入向量库
+2026-03-27 15:12:11,368 - agent - INFO - vector_store.py:88 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data\选购指南.txt已存入向量库
+2026-03-27 15:13:44,426 - agent - ERROR - vector_store.py:91 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data\扫地机器人100问.pdf处理失败:Collection expecting embedding with dimension of 384, got 1024
+Traceback (most recent call last):
+  File "E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\rag\vector_store.py", line 86, in load_document
+    self.vector_store.add_documents(split_document)     # 将内容存入向量库
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\envs\rag_agent\Lib\site-packages\langchain_core\vectorstores\base.py", line 258, in add_documents
+    return self.add_texts(texts, metadatas, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\envs\rag_agent\Lib\site-packages\langchain_chroma\vectorstores.py", line 651, in add_texts
+    self._collection.upsert(
+  File "D:\anaconda3\envs\rag_agent\Lib\site-packages\chromadb\api\models\Collection.py", line 513, in upsert
+    self._client._upsert(
+  File "D:\anaconda3\envs\rag_agent\Lib\site-packages\chromadb\api\rust.py", line 511, in _upsert
+    return self.bindings.upsert(
+           ^^^^^^^^^^^^^^^^^^^^^
+chromadb.errors.InvalidArgumentError: Collection expecting embedding with dimension of 384, got 1024
+2026-03-27 15:13:44,433 - agent - INFO - vector_store.py:75 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data\扫地机器人100问2.txt已存在，跳过
+2026-03-27 15:13:44,434 - agent - INFO - vector_store.py:75 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data\扫拖一体机器人100问.txt已存在，跳过
+2026-03-27 15:13:44,435 - agent - INFO - vector_store.py:75 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data\故障排除.txt已存在，跳过
+2026-03-27 15:13:44,436 - agent - INFO - vector_store.py:75 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data\维护保养.txt已存在，跳过
+2026-03-27 15:13:44,437 - agent - INFO - vector_store.py:75 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data\选购指南.txt已存在，跳过
+2026-03-27 15:15:52,405 - agent - INFO - vector_store.py:88 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data\扫地机器人100问.pdf已存入向量库
+2026-03-27 15:15:57,055 - agent - INFO - vector_store.py:88 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data\扫地机器人100问2.txt已存入向量库
+2026-03-27 15:16:03,900 - agent - INFO - vector_store.py:88 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data\扫拖一体机器人100问.txt已存入向量库
+2026-03-27 15:16:26,039 - agent - INFO - vector_store.py:88 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data\故障排除.txt已存入向量库
+2026-03-27 15:16:31,521 - agent - INFO - vector_store.py:88 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data\维护保养.txt已存入向量库
+2026-03-27 15:16:37,672 - agent - INFO - vector_store.py:88 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data\选购指南.txt已存入向量库
+2026-03-27 15:16:44,482 - agent - INFO - vector_store.py:75 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data\扫地机器人100问.pdf已存在，跳过
+2026-03-27 15:16:44,483 - agent - INFO - vector_store.py:75 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data\扫地机器人100问2.txt已存在，跳过
+2026-03-27 15:16:44,483 - agent - INFO - vector_store.py:75 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data\扫拖一体机器人100问.txt已存在，跳过
+2026-03-27 15:16:44,484 - agent - INFO - vector_store.py:75 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data\故障排除.txt已存在，跳过
+2026-03-27 15:16:44,484 - agent - INFO - vector_store.py:75 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data\维护保养.txt已存在，跳过
+2026-03-27 15:16:44,486 - agent - INFO - vector_store.py:75 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data\选购指南.txt已存在，跳过
+2026-03-27 15:20:01,163 - agent - INFO - vector_store.py:88 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data\扫地机器人100问.pdf已存入向量库
+2026-03-27 15:20:10,351 - agent - INFO - vector_store.py:88 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data\扫地机器人100问2.txt已存入向量库
+2026-03-27 15:20:16,786 - agent - INFO - vector_store.py:88 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data\扫拖一体机器人100问.txt已存入向量库
+2026-03-27 15:20:28,468 - agent - INFO - vector_store.py:88 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data\故障排除.txt已存入向量库
+2026-03-27 15:20:33,814 - agent - INFO - vector_store.py:88 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data\维护保养.txt已存入向量库
+2026-03-27 15:20:43,979 - agent - INFO - vector_store.py:88 - [加载知识库]文件E:\ai-agent\ai-agent学习\agent项目案例\agent项目跟练\data\选购指南.txt已存入向量库
+2026-03-27 16:18:18,485 - agent - ERROR - agent_tools.py:96 - 用户ID: user_id_1234567890，月份: 2025-3，没有对应的外部数据
+2026-03-27 16:18:32,230 - agent - ERROR - agent_tools.py:96 - 用户ID: 1002，月份: 2025-3，没有对应的外部数据
+2026-03-27 16:19:15,614 - agent - WARNING - agent_tools.py:96 - 用户ID: 1001，月份: 2025-1，没有对应的外部数据
+2026-03-27 18:52:04,365 - agent - INFO - middleware.py:35 - [log_before_model]即将调用模型，带有0条消息。
+2026-03-27 18:53:34,497 - agent - INFO - middleware.py:35 - [log_before_model]即将调用模型，带有1条消息。
+2026-03-27 18:53:34,498 - agent - DEBUG - middleware.py:37 - [log_before_model]HumanMessage当前消息：扫地机器人在我所在的地区的气温下如何保养？
+2026-03-27 18:53:39,417 - agent - INFO - middleware.py:16 - [tool monitor]执行工具：get_user_location
+2026-03-27 18:53:39,418 - agent - INFO - middleware.py:17 - [tool monitor]传入参数：{'query': '获取用户所在城市'}
+2026-03-27 18:53:39,422 - agent - INFO - middleware.py:21 - [tool monitor]工具执行结果：content='深圳' name='get_user_location' tool_call_id='call_1954db8423524494aee4398e'，调用成功
+2026-03-27 18:53:39,423 - agent - INFO - middleware.py:35 - [log_before_model]即将调用模型，带有3条消息。
+2026-03-27 18:53:39,423 - agent - DEBUG - middleware.py:37 - [log_before_model]ToolMessage当前消息：深圳
+2026-03-27 18:53:42,645 - agent - INFO - middleware.py:16 - [tool monitor]执行工具：get_weather
+2026-03-27 18:53:42,646 - agent - INFO - middleware.py:17 - [tool monitor]传入参数：{'city': '深圳'}
+2026-03-27 18:53:42,646 - agent - INFO - middleware.py:21 - [tool monitor]工具执行结果：content='城市深圳的天气是晴天，温度是25度，空气湿度50%，AQI21，最近6小时降雨概率极低，未来24小时无雨。' name='get_weather' tool_call_id='call_396713cd667d4886819f06ba'，调用成功
+2026-03-27 18:53:42,647 - agent - INFO - middleware.py:35 - [log_before_model]即将调用模型，带有5条消息。
+2026-03-27 18:53:42,648 - agent - DEBUG - middleware.py:37 - [log_before_model]ToolMessage当前消息：城市深圳的天气是晴天，温度是25度，空气湿度50%，AQI21，最近6小时降雨概率极低，未来24小时无雨。
+2026-03-27 18:53:47,128 - agent - INFO - middleware.py:16 - [tool monitor]执行工具：rag_summarize
+2026-03-27 18:53:47,128 - agent - INFO - middleware.py:17 - [tool monitor]传入参数：{'query': '扫地机器人在25度、湿度50%的晴天环境下如何保养'}
+2026-03-27 18:53:50,944 - agent - INFO - middleware.py:21 - [tool monitor]工具执行结果：content='参考资料中未提及扫地机器人在25度、湿度50%的晴天环境下的具体保养方法。' name='rag_summarize' tool_call_id='call_6d4e1e3f622f4a3998445c23'，调用成功
+2026-03-27 18:53:50,945 - agent - INFO - middleware.py:35 - [log_before_model]即将调用模型，带有7条消息。
+2026-03-27 18:53:50,945 - agent - DEBUG - middleware.py:37 - [log_before_model]ToolMessage当前消息：参考资料中未提及扫地机器人在25度、湿度50%的晴天环境下的具体保养方法。
+2026-03-27 18:57:29,750 - agent - INFO - middleware.py:35 - [log_before_model]即将调用模型，带有1条消息。
+2026-03-27 18:57:29,750 - agent - DEBUG - middleware.py:37 - [log_before_model]HumanMessage当前消息：扫地机器人在我所在的地区的气温下如何保养？
+2026-03-27 18:57:34,135 - agent - INFO - middleware.py:16 - [tool monitor]执行工具：get_user_location
+2026-03-27 18:57:34,135 - agent - INFO - middleware.py:17 - [tool monitor]传入参数：{'query': '获取用户所在城市'}
+2026-03-27 18:57:34,136 - agent - INFO - middleware.py:21 - [tool monitor]工具执行结果：content='深圳' name='get_user_location' tool_call_id='call_62d86da6bd3c474996317748'，调用成功
+2026-03-27 18:57:34,137 - agent - INFO - middleware.py:35 - [log_before_model]即将调用模型，带有3条消息。
+2026-03-27 18:57:34,137 - agent - DEBUG - middleware.py:37 - [log_before_model]ToolMessage当前消息：深圳
+2026-03-27 18:57:38,196 - agent - INFO - middleware.py:16 - [tool monitor]执行工具：get_weather
+2026-03-27 18:57:38,197 - agent - INFO - middleware.py:17 - [tool monitor]传入参数：{'city': '深圳'}
+2026-03-27 18:57:38,197 - agent - INFO - middleware.py:21 - [tool monitor]工具执行结果：content='城市深圳的天气是晴天，温度是25度，空气湿度50%，AQI21，最近6小时降雨概率极低，未来24小时无雨。' name='get_weather' tool_call_id='call_11851efb97a0461f867d6b2d'，调用成功
+2026-03-27 18:57:38,198 - agent - INFO - middleware.py:35 - [log_before_model]即将调用模型，带有5条消息。
+2026-03-27 18:57:38,198 - agent - DEBUG - middleware.py:37 - [log_before_model]ToolMessage当前消息：城市深圳的天气是晴天，温度是25度，空气湿度50%，AQI21，最近6小时降雨概率极低，未来24小时无雨。
+2026-03-27 18:57:41,878 - agent - INFO - middleware.py:16 - [tool monitor]执行工具：rag_summarize
+2026-03-27 18:57:41,878 - agent - INFO - middleware.py:17 - [tool monitor]传入参数：{'query': '扫地机器人在25度温度和50%湿度环境下的保养方法'}
+2026-03-27 18:57:46,504 - agent - INFO - middleware.py:21 - [tool monitor]工具执行结果：content='参考资料中未提及扫地机器人在25度温度和50%湿度环境下的具体保养方法。' name='rag_summarize' tool_call_id='call_e96249030c934d78944662bf'，调用成功
+2026-03-27 18:57:46,506 - agent - INFO - middleware.py:35 - [log_before_model]即将调用模型，带有7条消息。
+2026-03-27 18:57:46,506 - agent - DEBUG - middleware.py:37 - [log_before_model]ToolMessage当前消息：参考资料中未提及扫地机器人在25度温度和50%湿度环境下的具体保养方法。
+2026-03-27 19:27:35,905 - agent - INFO - middleware.py:35 - [log_before_model]即将调用模型，带有1条消息。
+2026-03-27 19:27:35,906 - agent - DEBUG - middleware.py:37 - [log_before_model]HumanMessage当前消息：在我当前所在位置的天气下，机器人如何保养
+2026-03-27 19:27:39,644 - agent - INFO - middleware.py:16 - [tool monitor]执行工具：get_user_location
+2026-03-27 19:27:39,645 - agent - INFO - middleware.py:17 - [tool monitor]传入参数：{'query': '获取用户当前位置'}
+2026-03-27 19:27:39,650 - agent - INFO - middleware.py:21 - [tool monitor]工具执行结果：content='上海' name='get_user_location' tool_call_id='call_96132d5afd9947f9b9101b74'，调用成功
+2026-03-27 19:27:39,653 - agent - INFO - middleware.py:35 - [log_before_model]即将调用模型，带有3条消息。
+2026-03-27 19:27:39,654 - agent - DEBUG - middleware.py:37 - [log_before_model]ToolMessage当前消息：上海
+2026-03-27 19:27:42,969 - agent - INFO - middleware.py:16 - [tool monitor]执行工具：get_weather
+2026-03-27 19:27:42,969 - agent - INFO - middleware.py:17 - [tool monitor]传入参数：{'city': '上海'}
+2026-03-27 19:27:42,971 - agent - INFO - middleware.py:21 - [tool monitor]工具执行结果：content='城市上海的天气是晴天，温度是25度，空气湿度50%，AQI21，最近6小时降雨概率极低，未来24小时无雨。' name='get_weather' tool_call_id='call_8d1bba3dcc0a4702bd785957'，调用成功
+2026-03-27 19:27:42,974 - agent - INFO - middleware.py:35 - [log_before_model]即将调用模型，带有5条消息。
+2026-03-27 19:27:42,974 - agent - DEBUG - middleware.py:37 - [log_before_model]ToolMessage当前消息：城市上海的天气是晴天，温度是25度，空气湿度50%，AQI21，最近6小时降雨概率极低，未来24小时无雨。
+2026-03-27 19:27:46,258 - agent - INFO - middleware.py:16 - [tool monitor]执行工具：rag_summarize
+2026-03-27 19:27:46,259 - agent - INFO - middleware.py:17 - [tool monitor]传入参数：{'query': '晴天25度湿度50%环境下扫地机器人保养建议'}
+2026-03-27 19:27:50,113 - agent - INFO - middleware.py:21 - [tool monitor]工具执行结果：content='在晴天25度、湿度50%的环境下，建议将扫地机器人放置于干燥通风处，避免阳光直射；及时清理尘盒、滚刷和滤网，保持机身清洁；定期检查边刷和传感器是否积灰；若长时间不使用，应关闭电源并取出电池（如可拆卸）。' name='rag_summarize' tool_call_id='call_d72848cc822e4a9d96e74051'，调用成功
+2026-03-27 19:27:50,115 - agent - INFO - middleware.py:35 - [log_before_model]即将调用模型，带有7条消息。
+2026-03-27 19:27:50,116 - agent - DEBUG - middleware.py:37 - [log_before_model]ToolMessage当前消息：在晴天25度、湿度50%的环境下，建议将扫地机器人放置于干燥通风处，避免阳光直射；及时清理尘盒、滚刷和滤网，保持机身清洁；定期检查边刷和传感器是否积灰；若长时间不使用，应关闭电源并取出电池（如可拆卸）。
+2026-03-27 19:28:21,211 - agent - INFO - middleware.py:35 - [log_before_model]即将调用模型，带有1条消息。
+2026-03-27 19:28:21,211 - agent - DEBUG - middleware.py:37 - [log_before_model]HumanMessage当前消息：你哈
+2026-03-27 19:29:10,156 - agent - INFO - middleware.py:35 - [log_before_model]即将调用模型，带有1条消息。
+2026-03-27 19:29:10,157 - agent - DEBUG - middleware.py:37 - [log_before_model]HumanMessage当前消息：在我城市的当前天气下，机器人如何让保养
+2026-03-27 19:29:15,426 - agent - INFO - middleware.py:16 - [tool monitor]执行工具：get_user_location
+2026-03-27 19:29:15,426 - agent - INFO - middleware.py:17 - [tool monitor]传入参数：{'query': '获取用户所在城市'}
+2026-03-27 19:29:15,429 - agent - INFO - middleware.py:21 - [tool monitor]工具执行结果：content='深圳' name='get_user_location' tool_call_id='call_a717cdaac78747c586c09ce1'，调用成功
+2026-03-27 19:29:15,433 - agent - INFO - middleware.py:35 - [log_before_model]即将调用模型，带有3条消息。
+2026-03-27 19:29:15,433 - agent - DEBUG - middleware.py:37 - [log_before_model]ToolMessage当前消息：深圳
+2026-03-27 19:29:18,895 - agent - INFO - middleware.py:16 - [tool monitor]执行工具：get_weather
+2026-03-27 19:29:18,896 - agent - INFO - middleware.py:17 - [tool monitor]传入参数：{'city': '深圳'}
+2026-03-27 19:29:18,896 - agent - INFO - middleware.py:21 - [tool monitor]工具执行结果：content='城市深圳的天气是晴天，温度是25度，空气湿度50%，AQI21，最近6小时降雨概率极低，未来24小时无雨。' name='get_weather' tool_call_id='call_28e6d8a47ab543dc803c87fc'，调用成功
+2026-03-27 19:29:18,899 - agent - INFO - middleware.py:35 - [log_before_model]即将调用模型，带有5条消息。
+2026-03-27 19:29:18,900 - agent - DEBUG - middleware.py:37 - [log_before_model]ToolMessage当前消息：城市深圳的天气是晴天，温度是25度，空气湿度50%，AQI21，最近6小时降雨概率极低，未来24小时无雨。
+2026-03-27 19:29:23,740 - agent - INFO - middleware.py:16 - [tool monitor]执行工具：rag_summarize
+2026-03-27 19:29:23,740 - agent - INFO - middleware.py:17 - [tool monitor]传入参数：{'query': '扫地机器人在晴天、25度、湿度50%环境下的保养方法'}
+2026-03-27 19:29:26,223 - agent - INFO - middleware.py:21 - [tool monitor]工具执行结果：content='参考资料中未提及扫地机器人在晴天、25度、湿度50%环境下的具体保养方法。' name='rag_summarize' tool_call_id='call_cca862baf7a2446891e00f8e'，调用成功
+2026-03-27 19:29:26,225 - agent - INFO - middleware.py:35 - [log_before_model]即将调用模型，带有7条消息。
+2026-03-27 19:29:26,225 - agent - DEBUG - middleware.py:37 - [log_before_model]ToolMessage当前消息：参考资料中未提及扫地机器人在晴天、25度、湿度50%环境下的具体保养方法。
+2026-03-27 19:31:59,730 - agent - INFO - middleware.py:35 - [log_before_model]即将调用模型，带有1条消息。
+2026-03-27 19:31:59,730 - agent - DEBUG - middleware.py:37 - [log_before_model]HumanMessage当前消息：在我城市的当前天气下，机器人如何保养
+2026-03-27 19:32:04,665 - agent - INFO - middleware.py:16 - [tool monitor]执行工具：get_user_location
+2026-03-27 19:32:04,666 - agent - INFO - middleware.py:17 - [tool monitor]传入参数：{'query': '获取用户所在城市'}
+2026-03-27 19:32:04,667 - agent - INFO - middleware.py:21 - [tool monitor]工具执行结果：content='深圳' name='get_user_location' tool_call_id='call_f8c4725f0c324f05a6aef18e'，调用成功
+2026-03-27 19:32:04,702 - agent - INFO - middleware.py:35 - [log_before_model]即将调用模型，带有3条消息。
+2026-03-27 19:32:04,703 - agent - DEBUG - middleware.py:37 - [log_before_model]ToolMessage当前消息：深圳
+2026-03-27 19:32:08,314 - agent - INFO - middleware.py:16 - [tool monitor]执行工具：get_weather
+2026-03-27 19:32:08,314 - agent - INFO - middleware.py:17 - [tool monitor]传入参数：{'city': '深圳'}
+2026-03-27 19:32:08,315 - agent - INFO - middleware.py:21 - [tool monitor]工具执行结果：content='城市深圳的天气是晴天，温度是25度，空气湿度50%，AQI21，最近6小时降雨概率极低，未来24小时无雨。' name='get_weather' tool_call_id='call_0ed7bee9a89e47b98119617b'，调用成功
+2026-03-27 19:32:08,909 - agent - INFO - middleware.py:35 - [log_before_model]即将调用模型，带有5条消息。
+2026-03-27 19:32:08,910 - agent - DEBUG - middleware.py:37 - [log_before_model]ToolMessage当前消息：城市深圳的天气是晴天，温度是25度，空气湿度50%，AQI21，最近6小时降雨概率极低，未来24小时无雨。
+2026-03-27 19:32:15,253 - agent - INFO - middleware.py:16 - [tool monitor]执行工具：rag_summarize
+2026-03-27 19:32:15,253 - agent - INFO - middleware.py:17 - [tool monitor]传入参数：{'query': '扫地机器人在晴天干燥环境下的保养方法'}
+2026-03-27 19:32:17,279 - agent - INFO - middleware.py:21 - [tool monitor]工具执行结果：content='参考资料中未提及扫地机器人在晴天干燥环境下的具体保养方法。' name='rag_summarize' tool_call_id='call_6d760826d55048dabfbdb0a2'，调用成功
+2026-03-27 19:32:17,618 - agent - INFO - middleware.py:35 - [log_before_model]即将调用模型，带有7条消息。
+2026-03-27 19:32:17,620 - agent - DEBUG - middleware.py:37 - [log_before_model]ToolMessage当前消息：参考资料中未提及扫地机器人在晴天干燥环境下的具体保养方法。
+2026-03-27 19:32:23,650 - agent - INFO - middleware.py:16 - [tool monitor]执行工具：rag_summarize
+2026-03-27 19:32:23,652 - agent - INFO - middleware.py:17 - [tool monitor]传入参数：{'query': '扫地机器人日常保养维护方法'}
+2026-03-27 19:32:27,512 - agent - INFO - middleware.py:21 - [tool monitor]工具执行结果：content='定期清理尘盒和滤网，检查并清除滚刷及边刷缠绕的毛发杂物，保持传感器清洁，及时擦拭机身表面灰尘，确保充电座周围无障碍物，并定期检查电池状态。' name='rag_summarize' tool_call_id='call_3b9049e679d14e5caa4c7aa0'，调用成功
+2026-03-27 19:32:28,295 - agent - INFO - middleware.py:35 - [log_before_model]即将调用模型，带有9条消息。
+2026-03-27 19:32:28,296 - agent - DEBUG - middleware.py:37 - [log_before_model]ToolMessage当前消息：定期清理尘盒和滤网，检查并清除滚刷及边刷缠绕的毛发杂物，保持传感器清洁，及时擦拭机身表面灰尘，确保充电座周围无障碍物，并定期检查电池状态。
+2026-03-27 19:32:41,567 - agent - INFO - middleware.py:35 - [log_before_model]即将调用模型，带有1条消息。
+2026-03-27 19:32:41,569 - agent - DEBUG - middleware.py:37 - [log_before_model]HumanMessage当前消息：帮我生成我的使用报告
+2026-03-27 19:32:48,130 - agent - INFO - middleware.py:16 - [tool monitor]执行工具：get_user_id
+2026-03-27 19:32:48,131 - agent - INFO - middleware.py:17 - [tool monitor]传入参数：{'query': '获取当前用户ID'}
+2026-03-27 19:32:48,132 - agent - INFO - middleware.py:21 - [tool monitor]工具执行结果：content='1005' name='get_user_id' tool_call_id='call_36dab3be8f3a4177a66555d5'，调用成功
+2026-03-27 19:32:48,189 - agent - INFO - middleware.py:35 - [log_before_model]即将调用模型，带有3条消息。
+2026-03-27 19:32:48,190 - agent - DEBUG - middleware.py:37 - [log_before_model]ToolMessage当前消息：1005
+2026-03-27 19:32:51,053 - agent - INFO - middleware.py:16 - [tool monitor]执行工具：get_current_month
+2026-03-27 19:32:51,054 - agent - INFO - middleware.py:17 - [tool monitor]传入参数：{}
+2026-03-27 19:32:51,055 - agent - INFO - middleware.py:21 - [tool monitor]工具执行结果：content='2025-08' name='get_current_month' tool_call_id='call_e7aa67b3afba490dac125706'，调用成功
+2026-03-27 19:32:51,146 - agent - INFO - middleware.py:35 - [log_before_model]即将调用模型，带有5条消息。
+2026-03-27 19:32:51,146 - agent - DEBUG - middleware.py:37 - [log_before_model]ToolMessage当前消息：2025-08
+2026-03-27 19:32:53,747 - agent - INFO - middleware.py:16 - [tool monitor]执行工具：fill_context_for_report
+2026-03-27 19:32:53,748 - agent - INFO - middleware.py:17 - [tool monitor]传入参数：{}
+2026-03-27 19:32:53,749 - agent - INFO - middleware.py:21 - [tool monitor]工具执行结果：content='fill_context_for_report已调用' name='fill_context_for_report' tool_call_id='call_50a6caa3555f49fbb1c2acf5'，调用成功
+2026-03-27 19:32:54,050 - agent - INFO - middleware.py:35 - [log_before_model]即将调用模型，带有7条消息。
+2026-03-27 19:32:54,051 - agent - DEBUG - middleware.py:37 - [log_before_model]ToolMessage当前消息：fill_context_for_report已调用
+2026-03-27 19:32:58,418 - agent - INFO - middleware.py:16 - [tool monitor]执行工具：fetch_external_data
+2026-03-27 19:32:58,419 - agent - INFO - middleware.py:17 - [tool monitor]传入参数：{'user_id': '1005', 'month': '2025-08'}
+2026-03-27 19:32:58,422 - agent - INFO - middleware.py:21 - [tool monitor]工具执行结果：content='{"特征": "120㎡ | 老人 | 防滑砖", "效率": "手动操作占比:97%\\\\n定时清扫未使用", "消耗": "电池衰减:27%\\\\n水箱未激活", "对比": "语音控制功能需调试+重新教学"}' name='fetch_external_data' tool_call_id='call_18e1296439994818bb0944d9'，调用成功
+2026-03-27 19:32:59,599 - agent - INFO - middleware.py:35 - [log_before_model]即将调用模型，带有9条消息。
+2026-03-27 19:32:59,600 - agent - DEBUG - middleware.py:37 - [log_before_model]ToolMessage当前消息：{"特征": "120㎡ | 老人 | 防滑砖", "效率": "手动操作占比:97%\\n定时清扫未使用", "消耗": "电池衰减:27%\\n水箱未激活", "对比": "语音控制功能需调试+重新教学"}
+2026-03-27 19:33:02,283 - agent - INFO - middleware.py:16 - [tool monitor]执行工具：rag_summarize
+2026-03-27 19:33:02,283 - agent - INFO - middleware.py:17 - [tool monitor]传入参数：{'query': '扫地机器人电池保养和定时清扫功能设置'}
+2026-03-27 19:33:10,602 - agent - INFO - middleware.py:21 - [tool monitor]工具执行结果：content='电池保养方面，应避免长时间满电或完全放电存放，建议在电量剩余20%-80%之间存放，并定期充电以维持电池活性。定时清扫功能可通过扫地机器人配套APP或机身按键设置，选择指定日期和时间自动启动清扫任务。' name='rag_summarize' tool_call_id='call_d9313608e8cb45aaae5621dd'，调用成功
+2026-03-27 19:33:11,725 - agent - INFO - middleware.py:35 - [log_before_model]即将调用模型，带有11条消息。
+2026-03-27 19:33:11,727 - agent - DEBUG - middleware.py:37 - [log_before_model]ToolMessage当前消息：电池保养方面，应避免长时间满电或完全放电存放，建议在电量剩余20%-80%之间存放，并定期充电以维持电池活性。定时清扫功能可通过扫地机器人配套APP或机身按键设置，选择指定日期和时间自动启动清扫任务。
+2026-03-27 19:33:16,200 - agent - INFO - middleware.py:16 - [tool monitor]执行工具：rag_summarize
+2026-03-27 19:33:16,201 - agent - INFO - middleware.py:17 - [tool monitor]传入参数：{'query': '老人使用扫地机器人的操作建议和语音控制设置'}
+2026-03-27 19:33:22,796 - agent - INFO - middleware.py:21 - [tool monitor]工具执行结果：content='老人使用扫地机器人时，建议选择操作界面简洁、按键少的型号，并优先考虑支持语音控制功能的产品。设置语音控制需确保设备连接至家庭Wi-Fi，并通过配套App绑定智能音箱（如小爱同学、天猫精灵等），按照App提示完成语音助手授权和设备配对。日常使用中，可直接通过语音指令如“开始清扫”“回充”等控制机器人，减少手动操作。' name='rag_summarize' tool_call_id='call_12101aa33960442ca39d89c6'，调用成功
+2026-03-27 19:33:24,552 - agent - INFO - middleware.py:35 - [log_before_model]即将调用模型，带有13条消息。
+2026-03-27 19:33:24,553 - agent - DEBUG - middleware.py:37 - [log_before_model]ToolMessage当前消息：老人使用扫地机器人时，建议选择操作界面简洁、按键少的型号，并优先考虑支持语音控制功能的产品。设置语音控制需确保设备连接至家庭Wi-Fi，并通过配套App绑定智能音箱（如小爱同学、天猫精灵等），按照App提示完成语音助手授权和设备配对。日常使用中，可直接通过语音指令如“开始清扫”“回充”等控制机器人，减少手动操作。
+2026-03-27 19:34:39,781 - agent - INFO - middleware.py:35 - [log_before_model]即将调用模型，带有1条消息。
+2026-03-27 19:34:39,782 - agent - DEBUG - middleware.py:37 - [log_before_model]HumanMessage当前消息：你好
+2026-03-27 19:35:45,744 - agent - INFO - middleware.py:35 - [log_before_model]即将调用模型，带有1条消息。
+2026-03-27 19:35:45,745 - agent - DEBUG - middleware.py:37 - [log_before_model]HumanMessage当前消息：你好，我新买的扫地机器人应该怎么使用
+2026-03-27 19:35:50,985 - agent - INFO - middleware.py:16 - [tool monitor]执行工具：rag_summarize
+2026-03-27 19:35:50,985 - agent - INFO - middleware.py:17 - [tool monitor]传入参数：{'query': '新买的扫地机器人使用方法'}
+2026-03-27 19:35:56,477 - agent - INFO - middleware.py:21 - [tool monitor]工具执行结果：content='新买的扫地机器人使用前需先充电，安装边刷和尘盒，下载对应APP并连接Wi-Fi进行配网，设置清扫模式和禁区，启动后自动清扫，使用完毕及时清理尘盒和滚刷。' name='rag_summarize' tool_call_id='call_bdd11a1b5f874c4fbe158d20'，调用成功
+2026-03-27 19:35:57,318 - agent - INFO - middleware.py:35 - [log_before_model]即将调用模型，带有3条消息。
+2026-03-27 19:35:57,318 - agent - DEBUG - middleware.py:37 - [log_before_model]ToolMessage当前消息：新买的扫地机器人使用前需先充电，安装边刷和尘盒，下载对应APP并连接Wi-Fi进行配网，设置清扫模式和禁区，启动后自动清扫，使用完毕及时清理尘盒和滚刷。

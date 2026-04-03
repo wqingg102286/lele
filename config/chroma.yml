@@ -1,0 +1,14 @@
+collection_name: agent
+embedding_function: chorma_db
+k: 3
+score_threshold: 0.2
+data_path: data/天津知识库
+persist_directory: ./chroma_db
+md5_hex_store: md5.text
+allow_knowledge_file_type: ["pdf", "docx","txt"]
+
+
+chunk_size: 200
+chunk_overlap: 20
+separators: ["\n", "\n\n", ",", ".", "?", "!", ":", ";", "-", "'", '"', "(", ")", "[", "]", "{", "}", "=", "*", "&",
+            "^", "%", "$", "#", "@", "~", "`", "|", "\\", "/", ">", "<", " "]

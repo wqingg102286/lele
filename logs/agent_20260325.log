@@ -1,0 +1,4 @@
+2026-03-25 21:59:47,370 - agent - INFO - log_handler.py:56 - hello world
+2026-03-25 21:59:47,370 - agent - ERROR - log_handler.py:57 - error
+2026-03-25 21:59:47,370 - agent - DEBUG - log_handler.py:58 - debug
+2026-03-25 21:59:47,371 - agent - WARNING - log_handler.py:59 - warning
